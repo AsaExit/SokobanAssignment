@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    height: 100vh;
+    background-image: linear-gradient(120deg, #6e6e6e 0%, #1b1b1b 100%);
+    font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.header-nav{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 20%;
+    align-items: center;
+    justify-content:space-between;
+    height: 80px;
+    width:100%;
+    font-size: 20px;
+    background-color: rgb(41, 41, 41);
+    color:white;
+}
+.nav-links ul li{
+    display: flex;
+    align-items: center;
+
+}
+a {
+    text-decoration: none;
+    color:tomato;
+}
+a:hover {
+    color:tomato;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+
+.map {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1000px;
+    height:650px;
+    border: 0.5px solid rgba(255, 136, 0, 0.938);
+    padding: 5%;
+    background: rgb(58, 58, 58);
+    background-repeat: repeat;
+    background-image: url('./image/tile4.png');
+}
+
+.tile {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.entity-block {
+    background-image: url('./image/box.png');
+}
+
+.entity-player {
+    background-image: url('./image/character1.png');
+}
+
+.tile-goal {
+    background-image: url('./image/goal.png');
+}
+
+.tile-wall {
+    background-image: url('./image/wall.png');
+}
+
+.entity-block-goal {
+    background-image: url('./image/boxHome.png');
+}
