@@ -1,4 +1,5 @@
-let playerMovement = "";// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
+//let playerMovement = ""; not usefull anymore
+// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
 let playerTile;
 let currentTile = Tiles.Space;
 // players position index in the arrays using y and x cordinates

@@ -2,7 +2,8 @@
 There are 2 arrays from the game map one y one x (rows and colums)
 @ function createMap: Creats tha map with a div classname map.How to display and create the mapgrid from the sokobanBase with hight and width.
 */ 
-let playerMovement = "";// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
+//let playerMovement = ""; not usefull anymore
+// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
 let playerTile;
 let currentTile = Tiles.Space;
 // players position index in the arrays using y and x cordinates
@@ -25,7 +26,7 @@ function moveKeyPress(event){
     case "w":  
         event.preventDefault();// prevent the page/site to reload it self after keypress
         movePlayer(playerPositionX, playerPositionY - 1); 
-        console.log(event.key +" hello world");
+        console.log(key +" hello world");
     break;
     case "ArrowRight":
     case "d": 
