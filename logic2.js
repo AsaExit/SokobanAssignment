@@ -22,7 +22,6 @@ function moveKeyPress(event){
     case "w":  
         event.preventDefault();// prevent the page/site to reload it self after keypress
         movePlayer(playerPositionX, playerPositionY - 1); 
-        console.log(event.key +" hello world");
     break;
     case "ArrowRight":
     case "d": 
@@ -108,25 +107,21 @@ function moveBlock(blockTile,player){
     case "ArrowUp":
     case "w":  
     nextTile = getTileObject(blockTile.X, blockTile.Y - 1);
-    console.log("hello there w")
     break;
 
     case "ArrowDown":
     case "s": 
     nextTile = getTileObject(blockTile.X, blockTile.Y + 1);
-    console.log("hello there s")
     break;
 
     case "ArrowLeft":
     case "a": 
     nextTile = getTileObject(blockTile.X - 1, blockTile.Y);
-    console.log("hello there d")
     break;
 
     case "ArrowRight":
     case "d": 
     nextTile = getTileObject(blockTile.X + 1, blockTile.Y);
-    console.log("hello there a")
     break;
   }
 
