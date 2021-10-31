@@ -19,23 +19,19 @@ function moveKeyPress({key}){
   switch(key){
     case "ArrowUp": 
     case "w":  
-        preventDefault();// prevent the page/site to reload it self after keypress
         movePlayer(playerPositionX, playerPositionY - 1); 
         console.log(key +" hello world");
     break;
     case "ArrowRight":
     case "d": 
-        preventDefault();
         movePlayer(playerPositionX + 1, playerPositionY); 
     break;
     case "ArrowDown":
     case "s": 
-        preventDefault();
         movePlayer(playerPositionX, playerPositionY + 1); 
     break;
     case "ArrowLeft": 
     case "a": 
-        preventDefault();
         movePlayer(playerPositionX - 1, playerPositionY); 
     break;
   }
