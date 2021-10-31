@@ -2,8 +2,7 @@
 There are 2 arrays from the game map one y one x (rows and colums)
 @ function createMap: Creats tha map with a div classname map.How to display and create the mapgrid from the sokobanBase with hight and width.
 */ 
-//let playerMovement = ""; not usefull anymore
-// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
+let playerMovement = "";// Variable playerMovement. leave this empty to use more then one key movement from the palyers position
 let playerTile;
 let currentTile = Tiles.Space;
 // players position index in the arrays using y and x cordinates
@@ -26,21 +25,25 @@ function moveKeyPress(event){
     case "w":  
         event.preventDefault();// prevent the page/site to reload it self after keypress
         movePlayer(playerPositionX, playerPositionY - 1); 
+        console.log(event.key +" Hello we are going up");
     break;
     case "ArrowRight":
     case "d": 
         event.preventDefault();
         movePlayer(playerPositionX + 1, playerPositionY); 
+        console.log(event.key +" Hello we are going Right");
     break;
     case "ArrowDown":
     case "s": 
         event.preventDefault();
         movePlayer(playerPositionX, playerPositionY + 1); 
+        console.log(event.key +" Hello we are going down");
     break;
     case "ArrowLeft": 
     case "a": 
         event.preventDefault();
         movePlayer(playerPositionX - 1, playerPositionY); 
+        console.log(event.key +" Hello we are going Left");
     break;
   }
 
@@ -60,9 +63,9 @@ function getType(type){
   }
 }
 
-function getTileObject(x, y){
-  let id = Number(y * tileMap01.width + x + 1);
-  return { Tile: document.getElementById(id), X: x, Y: y};
+function getTileObject(X, Y){
+  //let id = Number(y * tileMap01.width + x + 1);
+  return { Tile: document.getElementById( Number(Y * tileMap01.width + X + 1)), X, Y};
 }
 
 function movePlayer(x, y){
@@ -111,21 +114,25 @@ function moveBlock(blockTile,player){
     case "ArrowUp":
     case "w":  
     nextTile = getTileObject(blockTile.X, blockTile.Y - 1);
+    console.log("hello there W + Block")
     break;
 
     case "ArrowDown":
     case "s": 
     nextTile = getTileObject(blockTile.X, blockTile.Y + 1);
+    console.log("hello there S + Block")
     break;
 
     case "ArrowLeft":
     case "a": 
     nextTile = getTileObject(blockTile.X - 1, blockTile.Y);
+    console.log("hello there A + Block")
     break;
 
     case "ArrowRight":
     case "d": 
     nextTile = getTileObject(blockTile.X + 1, blockTile.Y);
+    console.log("hello there D + Block")
     break;
   }
 
