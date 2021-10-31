@@ -12,30 +12,30 @@ let nrOfFilledGoals = 0;
 
 let nrOfMoves = 0;
 
-function moveKeyPress(event){
+function moveKeyPress({key}){
 
-  playerMovement = event.key;
+  playerMovement = key;
 
-  switch(event.key){
+  switch(key){
     case "ArrowUp": 
     case "w":  
-        event.preventDefault();// prevent the page/site to reload it self after keypress
+        preventDefault();// prevent the page/site to reload it self after keypress
         movePlayer(playerPositionX, playerPositionY - 1); 
-        console.log(event.key +" hello world");
+        console.log(key +" hello world");
     break;
     case "ArrowRight":
     case "d": 
-        event.preventDefault();
+        preventDefault();
         movePlayer(playerPositionX + 1, playerPositionY); 
     break;
     case "ArrowDown":
     case "s": 
-        event.preventDefault();
+        preventDefault();
         movePlayer(playerPositionX, playerPositionY + 1); 
     break;
     case "ArrowLeft": 
     case "a": 
-        event.preventDefault();
+        preventDefault();
         movePlayer(playerPositionX - 1, playerPositionY); 
     break;
   }
